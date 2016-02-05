@@ -1,4 +1,4 @@
-(* Game 1 *)
+(* Rolling the Dice 8)
 U := Random[];
 X := Module[{u, val},
   u = U;
@@ -8,6 +8,7 @@ X := Module[{u, val},
   ]
 X
 
+(* Game 1 *)
 counttotal = 0;
 For[j = 0, j <= 10000, j++, count = 2;
  i = 1;
