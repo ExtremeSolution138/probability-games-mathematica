@@ -1,0 +1,10 @@
+(* Game 3 *)
+counttotal = 0;
+Y := Random[];
+For[j = 0, j <= 10000, j++, count = 2;
+ i = 1;
+ Data = Table[Y, {10}];
+ Answer = While[Data[[i + 1]] > Data[[i]], count++ ; i++];
+ counttotal = counttotal + count;
+ ]
+counttotal/10000 // N
