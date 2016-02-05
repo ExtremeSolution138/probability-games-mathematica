@@ -1,0 +1,19 @@
+(* Rolling of Dice *)
+U := Random[];
+X := Module[{u, val},
+  u = U;
+  val = Which[u < 1/6, 1, u < 1/3, 2, u < 1/2, 3, u < 2/3, 4, u < 5/6,
+     5, u < 1, 6];
+  Return[val];
+  ]
+X
+
+(* Game 2 *)
+counttotal = 0;
+For[j = 0, j <= 10000, j++, count = 2;
+ i = 1;
+ Data = Table[X, {10}];
+ Answer = While[Data[[i + 1]] > Data[[i]], count++ ; i++];
+ counttotal = counttotal + count;
+ ]
+counttotal/10000 // N
